@@ -35,6 +35,10 @@ mongoose.connect('mongodb+srv://ambadkarvaishnavi667:Sunitaambadkar@signup.q9zwd
   .then(() => console.log('MongoDB connected'))
   .catch((err) => console.error('Error connecting to MongoDB:', err));
 
+app.get("/",(req,res)=>{
+    res.json("Hi");
+})
+
 // Route to handle adding new post
 app.post('/api/posts', async (req, res) => {
   const { title, description } = req.body;
@@ -66,9 +70,7 @@ app.post('/api/posts', async (req, res) => {
     res.status(500).json({ message: 'Error creating post', error: err });
   }
 });
-app.get("/",(req,res)=>{
-    res.json("Hi");
-})
+
 
 // Add this route to fetch all posts
 app.get('/api/posts', async (req, res) => {

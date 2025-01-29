@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #2a2a72;
+    padding: 10px;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar li {
+    margin: 0 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.home-page {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Page Styling */
+.add-post-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 77vh;
+    background: linear-gradient(135deg, #43cea2, #185a9d); /* Blue to green gradient */
+    padding: 20px;
+}
+
+/* Form Container */
+.form-container {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Input & Textarea */
+.add-post-page input,
+.add-post-page textarea {
+    display: block;
+    margin: 10px 0;
+    padding: 12px;
+    width: 100%;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #f0f8ff;
+    outline: none;
+    transition: 0.3s;
+}
+
+.add-post-page input:focus,
+.add-post-page textarea:focus {
+    border-color: #43cea2;
+    box-shadow: 0 0 8px rgba(67, 206, 162, 0.3);
+}
+
+/* Custom File Upload Button */
+.custom-file-upload {
+    display: inline-block;
+    background-color: #43cea2;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.custom-file-upload:hover {
+    background-color: #185a9d;
+}
+
+/* Hide default file input */
+.custom-file-upload input {
+    display: none;
+}
+
+/* Image Preview */
+.image-preview {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Submit Button */
+.add-post-page button {
+    padding: 12px 20px;
+    background-color: #43cea2;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.add-post-page button:hover {
+    background-color: #185a9d;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* List Posts Page */
+.list-posts-page ul {
+    list-style: none;
+    padding: 0;
+}
+
+.list-posts-page li {
+    margin: 20px 0;
+}
+
+.list-posts-page img {
+    width: 200px;
+    height: auto;
+}

@@ -12,7 +12,7 @@ const port = 5000;
 // Middleware
 app.use(cors(
     {
-    origin:["https://contacts-front-sigma.vercel.app"],
+    origin:[""],
     methods:["POST","GET"],
     credentials:true
     }

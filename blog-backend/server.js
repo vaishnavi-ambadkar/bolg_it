@@ -10,7 +10,13 @@ const app = express();
 const port = 5000;
 
 // Middleware
-app.use(cors());
+app.use(cors(
+    {
+    origin:["https://contacts-front-sigma.vercel.app"],
+    methods:["POST","GET"],
+    credentials:true
+    }
+)); 
 app.use(express.json());
 app.use(fileUpload({ useTempFiles: true, tempFileDir: '/tmp/' }));
 
@@ -28,6 +34,10 @@ mongoose.connect('mongodb+srv://ambadkarvaishnavi667:Sunitaambadkar@signup.q9zwd
 })
   .then(() => console.log('MongoDB connected'))
   .catch((err) => console.error('Error connecting to MongoDB:', err));
+
+app.get("/",(req,res)=>{
+    res.json("Hi");
+})
 
 // Route to handle adding new post
 app.post('/api/posts', async (req, res) => {
